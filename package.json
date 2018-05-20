@@ -6,9 +6,11 @@
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack --mode=development",
-    "build:prod":"webpack -p --env production",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server --mode=development",
-    "test":"jest"
+    "test": "jest",
+    "start":"node server/server.js",
+    "heroku-postbuild":"npm run build:prod"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
+    "express": "^4.16.3",
     "live-server": "^1.2.0",
     "moment": "^2.22.1",
     "node-sass": "^4.9.0",
